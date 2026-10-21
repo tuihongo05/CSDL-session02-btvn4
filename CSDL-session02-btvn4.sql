@@ -1,0 +1,10 @@
+CREATE DATABASE session02_btvn4;
+USE session02_btvn4;
+
+CREATE TABLE users(
+	MaNguoiDung VARCHAR(20) PRIMARY KEY,
+	TenDangNhap VARCHAR(255) UNIQUE,
+	MatKhau VARCHAR(255) NOT NULL,
+	TrangThai VARCHAR(10) DEFAULT 'ACTIVE',
+    CHECK (TrangThai IN ('ACTIVE', 'INACTIVE'))
+);
